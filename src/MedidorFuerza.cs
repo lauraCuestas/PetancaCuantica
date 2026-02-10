@@ -15,7 +15,6 @@ public partial class MedidorFuerza : Node2D
 	[Export] public float MultiplicadorFuerza = 20.0f;
 
 	// --- CORRECCIÓN DE ÁNGULO ---
-	// Si la bola sale torcida, ajusta esto en el editor: 90, -90 o 180.
 	[Export] public float GradosCorreccion = 0.0f; 
 
 	// --- ESTADOS ---
@@ -93,7 +92,7 @@ public partial class MedidorFuerza : Node2D
 			
 				EfectoReboteFlecha(); 
 				
-				// Pasamos a cargar fuerza
+				// cargar fuerza
 				_estadoActual = Estado.CargandoFuerza;
 				BarraVisual.Visible = true;
 				BarraVisual.Value = 0;
@@ -101,7 +100,7 @@ public partial class MedidorFuerza : Node2D
 				break;
 
 			case Estado.CargandoFuerza:
-				// Momento del disparo
+				// disparo
 				_estadoActual = Estado.Lanzado;
 				BarraVisual.Visible = false;
 				FlechaPivote.Visible = false;
@@ -142,11 +141,11 @@ public partial class MedidorFuerza : Node2D
 		BarraVisual.Visible = false;
 		FlechaPivote.Visible = true;
 		
-		// Aseguramos que la escala esté bien por si acaso
+		// Aseguramos que la escala esté bien 
 		FlechaPivote.Scale = new Vector2(1, 1);
 
 		Pelota.LinearVelocity = Vector2.Zero;
 		Pelota.AngularVelocity = 0;
-		Pelota.Position = new Vector2(500, 300); // Pon aquí la posición inicial X, Y de tu pelota
+		Pelota.Position = new Vector2(500, 300); 
 	}
 }

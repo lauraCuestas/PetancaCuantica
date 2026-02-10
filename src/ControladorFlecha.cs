@@ -11,7 +11,7 @@ public partial class ControladorFlecha : Node2D
 
 	public override void _Process(double delta)
 	{
-		// Solo movemos la flecha si estamos en modo "Apuntando"
+		// Solo movemos la flecha si estamos en modo Apuntando
 		if (_estaApuntando)
 		{
 			MoverFlecha((float)delta);
@@ -44,7 +44,7 @@ public partial class ControladorFlecha : Node2D
 		}
 	}
 	
-	// Función extra por si necesitas reiniciar el tiro
+	// Función extra
 	public void ReiniciarApuntado()
 	{
 		_estaApuntando = true;
