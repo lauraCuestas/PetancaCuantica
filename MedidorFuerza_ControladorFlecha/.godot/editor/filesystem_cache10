@@ -1,0 +1,13 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1770748722
+FirstGame.tscn::PackedScene::5689533482988401398::1770748722::0::1::::<><><>0<>0<><>::uid://cb06ru1i6p47i::::res://src/ControladorFlecha.cs<>uid://bucan8vfyw8mp::::res://Imagen/ImagenFlecha.png<>uid://cqyvnu6sfwyb::::res://src/MedidorFuerza.cs<>uid://gj2h36or5xyp::::res://Imagen/BolaPetancaCuantica.png
+icon.svg::CompressedTexture2D::15747543338937416::1770733664::1770740660::1::::<><><>0<>0<>c65c1a2c9d92ad5c6a9f32c585ac5984<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Imagen/::1770748979
+BolaPetancaCuantica.png::CompressedTexture2D::441365840179522203::1770733664::1770740661::1::::<><><>0<>0<>cd73f32f6b0a799a79ea981949bfb1dc<>res://.godot/imported/BolaPetancaCuantica.png-87f06ec8c895ec85f04db715c4a6fc87.ctex::
+Diana.png::CompressedTexture2D::6872876174332041154::1770748915::1770748980::1::::<><><>0<>0<>bc02e8d5f555b34e8d684546ad38560c<>res://.godot/imported/Diana.png-325476abcc108fb989464638ad3b9d7c.ctex::
+ImagenFlecha.png::CompressedTexture2D::3794351293254231867::1770733664::1770740661::1::::<><><>0<>0<>37a5afe1aca8acc6139520b4efe3315d<>res://.godot/imported/ImagenFlecha.png-88d541fe0f7f6a389d844993c5c9e9b0.ctex::
+IndicadorFlecha.png::CompressedTexture2D::906606698565779451::1770733664::1770740661::1::::<><><>0<>0<>9070857d4690a79753889403710631cc<>res://.godot/imported/IndicadorFlecha.png-3ab0910cbdb35e3da2fbed6bb24f4fcf.ctex::
+newFlecha.png::CompressedTexture2D::5864534891064181758::1770733664::1770740661::1::::<><><>0<>0<>aeea2e6c8e8ab1c7e93ba788b91476cb<>res://.godot/imported/newFlecha.png-d43d5c75ad37900c774d5ba3fee12041.ctex::
+::res://src/::1770748666
+ControladorFlecha.cs::CSharpScript::4896553331185324196::1770741099::0::1::::<>Node2D<><>0<>0<><>::
+MedidorFuerza.cs::CSharpScript::174903155971834289::1770748666::0::1::::<>Node2D<><>0<>0<><>::
