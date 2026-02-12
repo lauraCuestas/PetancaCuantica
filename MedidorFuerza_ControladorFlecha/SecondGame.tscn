@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://cncb1xybfwuw1"]
+[gd_scene load_steps=13 format=3 uid="uid://b24wn51a4o8gc"]
 
-[ext_resource type="Script" uid="uid://cb06ru1i6p47i" path="res://src/ControladorFlecha.cs" id="1_avh0g"]
-[ext_resource type="Texture2D" uid="uid://bucan8vfyw8mp" path="res://Imagen/ImagenFlecha.png" id="2_4dlvo"]
-[ext_resource type="Script" uid="uid://cqyvnu6sfwyb" path="res://src/MedidorFuerza.cs" id="4_r22ry"]
-[ext_resource type="Texture2D" uid="uid://gj2h36or5xyp" path="res://Imagen/BolaPetancaCuantica.png" id="4_riga8"]
-[ext_resource type="Texture2D" uid="uid://ba83x5qgrrtrx" path="res://Imagen/DianaBlanca.png" id="5_hitje"]
-[ext_resource type="Script" uid="uid://ds455dao685bg" path="res://Objetivo.cs" id="6_hitje"]
-[ext_resource type="PackedScene" uid="uid://l0ikv6757454" path="res://pause_menu.tscn" id="6_kdcmg"]
+[ext_resource type="Texture2D" uid="uid://bucan8vfyw8mp" path="res://Imagen/ImagenFlecha.png" id="1_yoxlh"]
+[ext_resource type="Script" uid="uid://cb06ru1i6p47i" path="res://src/ControladorFlecha.cs" id="2_rmqyk"]
+[ext_resource type="Texture2D" uid="uid://gj2h36or5xyp" path="res://Imagen/BolaPetancaCuantica.png" id="3_kin1m"]
+[ext_resource type="Script" uid="uid://cqyvnu6sfwyb" path="res://src/MedidorFuerza.cs" id="4_lgr2f"]
+[ext_resource type="Texture2D" uid="uid://c46jjcauxv5bq" path="res://Imagen/Diana.png" id="5_f6gef"]
+[ext_resource type="PackedScene" uid="uid://l0ikv6757454" path="res://pause_menu.tscn" id="6_3sjn0"]
+[ext_resource type="Script" uid="uid://ds455dao685bg" path="res://Objetivo.cs" id="6_rmqyk"]
+[ext_resource type="Texture2D" uid="uid://ba83x5qgrrtrx" path="res://Imagen/DianaBlanca.png" id="8_kin1m"]
 
 [sub_resource type="Gradient" id="Gradient_avh0g"]
 offsets = PackedFloat32Array(0, 0.61013216, 0.6431718)
@@ -37,8 +38,8 @@ scale = Vector2(0.2767788, 0.3908139)
 
 [node name="SpriteImagenFlecha" type="Sprite2D" parent="ImagenFlechaNode"]
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("2_4dlvo")
-script = ExtResource("1_avh0g")
+texture = ExtResource("1_yoxlh")
+script = ExtResource("2_rmqyk")
 
 [node name="Node2D" type="Node2D" parent="."]
 scale = Vector2(0.09, 0.09)
@@ -50,7 +51,7 @@ linear_damp = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/PelotaA"]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_riga8")
+texture = ExtResource("3_kin1m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/PelotaA"]
 scale = Vector2(0.2, 0.2)
@@ -62,7 +63,7 @@ linear_damp = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D/PelotaB"]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_riga8")
+texture = ExtResource("3_kin1m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/PelotaB"]
 scale = Vector2(0.2, 0.2)
@@ -85,14 +86,13 @@ default_color = Color(1, 0.7137255, 0.7019608, 0.81960785)
 position = Vector2(0, -239)
 
 [node name="NodeBarraFuerza" type="Node2D" parent="." node_paths=PackedStringArray("ScriptFlecha", "BarraVisual", "PelotaA", "PelotaB", "LineaA", "LineaB", "PuntoColapso", "Objetivo", "LabelInfo", "MarcaAzul", "MarcaRojo", "MetaAzul", "MetaRojo")]
-script = ExtResource("4_r22ry")
+script = ExtResource("4_lgr2f")
 ScriptFlecha = NodePath("../ImagenFlechaNode/SpriteImagenFlecha")
 BarraVisual = NodePath("BarraFuerza")
 PelotaA = NodePath("../Node2D/PelotaA")
 PelotaB = NodePath("../Node2D/PelotaB")
 LineaA = NodePath("../Node2D/LineaProyeccionA")
 LineaB = NodePath("../Node2D/LineaProyeccionB")
-RutaSiguienteNivel = "res://SecondGame.tscn"
 PuntoColapso = NodePath("../PuntoColapso")
 VelocidadOscilacion = 12.0
 Objetivo = NodePath("../Objetivo")
@@ -118,41 +118,28 @@ visible = false
 modulate = Color(1, 1, 1, 0.41960785)
 self_modulate = Color(1, 1, 1, 0.44705883)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_riga8")
+texture = ExtResource("3_kin1m")
 
 [node name="Objetivo" type="Sprite2D" parent="."]
 position = Vector2(0, -500)
 scale = Vector2(0.22989358, 0.22989358)
-texture = ExtResource("5_hitje")
-script = ExtResource("6_hitje")
-
-[node name="MetaAzul" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(0.6431373, 1, 1, 0.81960785)
-position = Vector2(-364, 449)
-scale = Vector2(0.22989358, 0.22989358)
-texture = ExtResource("5_hitje")
-
-[node name="MetaRojo" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(1, 0.7137255, 0.7019608, 0.81960785)
-position = Vector2(-520, 449)
-scale = Vector2(0.22989358, 0.22989358)
-texture = ExtResource("5_hitje")
+texture = ExtResource("5_f6gef")
+script = ExtResource("6_rmqyk")
+SeMueve = true
 
 [node name="MarcaAzul" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(0, 0.61519843, 0.61614645, 1)
 position = Vector2(184.99998, 200.99994)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_riga8")
+texture = ExtResource("3_kin1m")
 
 [node name="MarcaRojo" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(0.80758065, 0, 0.27861342, 1)
 position = Vector2(-128.99998, 190.99994)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_riga8")
+texture = ExtResource("3_kin1m")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 446.0
@@ -162,4 +149,18 @@ offset_bottom = -485.0
 text = "Cargando...
 "
 
-[node name="PauseMenu" parent="." instance=ExtResource("6_kdcmg")]
+[node name="PauseMenu" parent="." instance=ExtResource("6_3sjn0")]
+
+[node name="MetaAzul" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.6431373, 1, 1, 0.81960785)
+position = Vector2(-364, 449)
+scale = Vector2(0.22989358, 0.22989358)
+texture = ExtResource("8_kin1m")
+
+[node name="MetaRojo" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0.7137255, 0.7019608, 0.81960785)
+position = Vector2(-520, 449)
+scale = Vector2(0.22989358, 0.22989358)
+texture = ExtResource("8_kin1m")
