@@ -6,3 +6,6 @@ res://src/MainMenu.cs
 res://src/MedidorFuerza.cs
 res://src/ControladorFlecha.cs
 res://SecondGame.tscn
+res://FirstGame.tscn
+res://main_menu.tscn
+res://pause_menu.tscn
